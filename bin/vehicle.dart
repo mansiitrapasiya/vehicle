@@ -1,29 +1,34 @@
-abstract class Vehical {
-  void vehicleBreak() {
-    print("----what is simillar in car and bike----");
+abstract class Vehicle {
+  void manufacturer() {
+    print("----WHAT IS SIMILLAR CAR AND BIKE----");
     print("1. The disc break are same in both");
     print("2. Both have rubber tires,wheels with bearings");
   }
 }
 
-class Verna extends Vehical {
+class Verna extends Vehicle {
   @override
-  void vehicleBreak();
-  void handle() {
-    print("---what is diffrent between car and bike");
-    print("1. Cars have airbags and seat belts");
-    print("2. Bikes have not ");
+  void manufacturer();
+  void airbags() {
+    print("---WHAT IS DIFFERNT BETWEEN BIKE AND CAR---");
+    print("-/-FOUR WHEELER-/-");
+    print("-> Cars have airbags and seat belts");
   }
 }
 
-class Shine extends Vehical {
+class Shine extends Vehicle {
   @override
-  void vehicleBreak();
+  void manufacturer();
+  void handle() {
+    print("-/-TWO WHEELER-/-");
+    print("-> Bikes have not airbags and seat belts");
+  }
 }
 
 void main() {
   Verna v = Verna();
   Shine s = Shine();
-  s.vehicleBreak();
-  v.handle();
+  v.manufacturer();
+  v.airbags();
+  s.handle();
 }
